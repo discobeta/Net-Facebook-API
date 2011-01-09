@@ -1,4 +1,4 @@
-Net-Facebook-API version 0.01
+Net-Facebook-API version 0.05
 =============================
 
 The README is used to introduce the module and provide instructions on
@@ -25,13 +25,17 @@ DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-  blah blah blah
+LWP::UserAgent;
+URI::Escape;
+MIME::Base64::URLSafe;
+Digest::SHA qw(hmac_sha256);
+JSON::XS;
 
 COPYRIGHT AND LICENCE
 
 Put the correct copyright and licence information here.
 
-Copyright (C) 2011 by root
+Copyright (C) 2011 by Asaf Klibansky <asaf@sortprice.com>
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.5 or,
