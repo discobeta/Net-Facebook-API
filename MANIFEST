@@ -4,3 +4,4 @@ MANIFEST
 README
 t/Net-Facebook-API.t
 lib/Net/Facebook/API.pm
+META.yml                                 Module meta-data (added by MakeMaker)
