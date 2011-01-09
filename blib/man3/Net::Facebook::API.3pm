@@ -144,14 +144,14 @@ my \f(CW$cgi\fR = \s-1CGI\-\s0>new;
 my \f(CW$r\fR = shift;
 my \f(CW$token\fR;
 my \f(CW$fb\fR = Net::Facebook::API\->new(
-                                 client_id => '172557189446149',
-                                 client_secret => 'af5ecf61132ec849f430cf301d3c305e',
-                                 http_request_method => 'post'
+                                 client_id => 'your\-application\-id',
+                                 client_secret => 'your\-application\-secret',
+                                 http_request_method => 'post' # post or get
                                  );
 .PP
 if (!param('code')) {
     my \f(CW$auth_url\fR = \f(CW$fb\fR\->get_authorize_url(
-                                          redirect_uri => 'http://beta.sortprice.com/netfacebookapi',
+                                          redirect_uri => 'http://www.yourdomain.com/yourapp',
                                           scope => 'offline_access'
                                           );
     print \f(CW$cgi\fR\->redirect($auth_url);
@@ -161,13 +161,13 @@ if (!param('code')) {
 if (param('code')) {
     \f(CW$token\fR = \f(CW$fb\fR\->get_access_token(
                                    code => param('code'),
-                                   redirect_uri => 'http://beta.sortprice.com/netfacebookapi', # where to redirect after obtaining the code
+                                   redirect_uri => 'http://www.yourdomain.com/yourapp', # where to redirect after obtaining the code
                                    );
 }
 if (!$token) {
     print \f(CW$cgi\fR\->redirect(
                          \f(CW$fb\fR\->get_authorize_url(
-                                                redirect_uri => 'http://beta.sortprice.com/netfacebookapi',
+                                                redirect_uri => 'http://www.yourdomain.com/yourapp',
                                                 scope => 'offline_access,publish_stream' # scope of permissions, see http://developers.facebook.com/docs/authentication/permissions
                                                 )
                          )};
