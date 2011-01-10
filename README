@@ -25,11 +25,11 @@ DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-LWP::UserAgent;
-URI::Escape;
-MIME::Base64::URLSafe;
-Digest::SHA qw(hmac_sha256);
-JSON::XS;
+LWP::UserAgent
+URI::Escape
+MIME::Base64::URLSafe
+Digest::SHA qw(hmac_sha256)
+JSON::XS
 
 COPYRIGHT AND LICENCE
 
