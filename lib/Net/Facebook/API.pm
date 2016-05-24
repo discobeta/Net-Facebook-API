@@ -215,6 +215,6 @@ See http://developers.facebook.com/docs/authentication/ for more details
 
 =head1 AUTHOR
 
-Asaf Klibansky, asaf@sortprice.com
+Asaf Klibansky, discobeta@gmail.com
 
 =cut
